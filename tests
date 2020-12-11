@@ -1,0 +1,24 @@
+4
+9 3
+1005 1001 1003 1005 1008 1006 1006 1009 1010
+4
+11 4
+1005 1008 1008 1003 1002 1001 1005 1010 1005 1020 1028
+5
+7 3
+2002 2001 2003 2002 2001 2003 2002
+6
+6 5
+1005 1020 1005 1015 1000 1020
+0
+
+if (Math.Abs(values[k] - values[k+t]) <= differenceValue && Math.Abs(values[k+t] - values[k+t+1]) <= differenceValue) 
+                            {
+                                stableInterval++;
+                                Console.WriteLine(values[k]);
+                            }
+                            else stableInterval = 1;
+
+
+                            if(Math.Abs(values[k] - values[k+t]) <= differenceValue && Math.Abs(values[k+t] - values[k+1]) <= differenceValue) stableInterval ++;
+                            else break;
