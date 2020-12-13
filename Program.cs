@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace stableFlight
 {
@@ -48,13 +48,15 @@ namespace stableFlight
                     }
                     //finding stable intervals
 
-                    
+                    //wallking through the first step
                     for (int k = 0; k < valuesCount - 1; k++)
                     {
+                        //finding the next
                         for (int t = 1; t < (valuesCount - k) ; t++){                         
                             if(Math.Abs(values[k] - values[k+t]) <= differenceValue && Math.Abs(values[k+t] - values[k+1]) <= differenceValue) 
                             {
                                 stableInterval = 1;
+                                //checking the middle values 
                                 for (int n = k+1; n <= k+t; n++)
                                 {
                                     if (Math.Abs(values[n] - values[k+t]) <= differenceValue) stableInterval++;
