@@ -9,8 +9,6 @@ namespace stableFlight
             try
             {
                 int testsCount = int.Parse(Console.ReadLine());
-                //input validation 1
-                if (testsCount > 10000) crash();
                 string vC;
                 int valuesCount;
                 int differenceValue;
@@ -27,7 +25,7 @@ namespace stableFlight
                     valuesCount = int.Parse(vC.Split(' ')[0]);
                     differenceValue = int.Parse(vC.Split(' ')[1]);
 
-                    //Input validation 2
+                    //Input validation 
                     if (valuesCount < 5 && valuesCount > 1000000 || differenceValue < 3 && differenceValue > 1000) crash();
                     else if (differenceValue < 3 && differenceValue > 1000) crash();
                     else if (valuesCount < 5 && valuesCount > 1000000 || differenceValue < 3 && differenceValue > 1000) crash();
@@ -44,6 +42,7 @@ namespace stableFlight
                     for (int j = 0; j < valuesCount; j++ )
                     {
                         values[j] = int.Parse(valuesStr.Split(' ')[j]);
+                        //input validation 1
                         if (values[j] <= 0 || values[j] > 10000) crash();
                     }
                     //finding stable intervals
